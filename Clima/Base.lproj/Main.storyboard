@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Clima" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kisspng-new-york-city-building-clip-art-stylish-city-building-vector-clip-art-5a9a93065784a8.8226723015200796223585" translatesAutoresizingMaskIntoConstraints="NO" id="syB-Xd-NV7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ODq-7w-q55" userLabel="Stack View Busqueda">
+                                <rect key="frame" x="10" y="40" width="355" height="32"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NL-6Q-TrJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="32"/>
+                                        <state key="normal" image="lugar"/>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tHu-dv-glg">
+                                        <rect key="frame" x="79.5" y="0.0" width="235.5" height="32"/>
+                                        <color key="backgroundColor" red="0.2910749346" green="0.65989847720000006" blue="0.65372015409999995" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKY-Vi-wyJ">
+                                        <rect key="frame" x="325" y="0.0" width="30" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="KMY-l0-Z1Z"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="buscar"/>
+                                        <connections>
+                                            <action selector="BuscarButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lKp-Qy-cdS"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="tHu-dv-glg" secondAttribute="bottom" id="4PE-dc-lJd"/>
+                                    <constraint firstAttribute="trailing" secondItem="WKY-Vi-wyJ" secondAttribute="trailing" id="H80-iY-b0i"/>
+                                    <constraint firstItem="4NL-6Q-TrJ" firstAttribute="top" secondItem="ODq-7w-q55" secondAttribute="top" id="K23-ar-bdQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="WKY-Vi-wyJ" secondAttribute="bottom" id="SaQ-I7-r6u"/>
+                                    <constraint firstItem="WKY-Vi-wyJ" firstAttribute="top" secondItem="ODq-7w-q55" secondAttribute="top" id="TEm-YQ-f2u"/>
+                                    <constraint firstAttribute="bottom" secondItem="4NL-6Q-TrJ" secondAttribute="bottom" id="l38-N5-8Zc"/>
+                                    <constraint firstItem="4NL-6Q-TrJ" firstAttribute="leading" secondItem="ODq-7w-q55" secondAttribute="leading" id="phx-Ox-poB"/>
+                                    <constraint firstItem="tHu-dv-glg" firstAttribute="top" secondItem="ODq-7w-q55" secondAttribute="top" id="ti3-bg-4Qr"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morelia Michoacán" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-j8-i5x">
+                                <rect key="frame" x="90" y="202" width="195" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="I3Q-7D-apM" userLabel="Stack View Temp">
+                                <rect key="frame" x="10" y="112" width="190" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soleado" translatesAutoresizingMaskIntoConstraints="NO" id="KH0-g8-4uf">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="CeX-zh-ciQ"/>
+                                            <constraint firstAttribute="height" constant="40" id="OGy-Ws-ea7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSm-FM-X58">
+                                        <rect key="frame" x="50" y="0.0" width="53" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5f-zp-h14">
+                                        <rect key="frame" x="113" y="0.0" width="77" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="X5f-zp-h14" secondAttribute="bottom" id="HHI-ue-QsX"/>
+                                    <constraint firstAttribute="bottom" secondItem="fSm-FM-X58" secondAttribute="bottom" id="Wyq-We-APs"/>
+                                    <constraint firstItem="fSm-FM-X58" firstAttribute="top" secondItem="I3Q-7D-apM" secondAttribute="top" id="cmy-AH-g37"/>
+                                    <constraint firstItem="X5f-zp-h14" firstAttribute="top" secondItem="I3Q-7D-apM" secondAttribute="top" id="qtE-KF-DfS"/>
+                                    <constraint firstAttribute="trailing" secondItem="X5f-zp-h14" secondAttribute="trailing" id="ws2-Vv-oNY"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="S5r-j8-i5x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="1ex-rl-5GB"/>
+                            <constraint firstItem="ODq-7w-q55" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3pb-Oh-rwp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I3Q-7D-apM" secondAttribute="trailing" constant="175" id="CDx-Q9-3Er"/>
+                            <constraint firstItem="ODq-7w-q55" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="FOK-z9-VAJ"/>
+                            <constraint firstItem="syB-Xd-NV7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FqK-6g-Wq6"/>
+                            <constraint firstItem="S5r-j8-i5x" firstAttribute="top" secondItem="I3Q-7D-apM" secondAttribute="bottom" constant="50" id="HDs-NB-n3V"/>
+                            <constraint firstItem="I3Q-7D-apM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="T9K-sJ-ahy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S5r-j8-i5x" secondAttribute="bottom" constant="440" id="hmQ-rX-Aph"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S5r-j8-i5x" secondAttribute="trailing" constant="90" id="oBZ-Ww-69I"/>
+                            <constraint firstItem="syB-Xd-NV7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pWX-wZ-scS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ODq-7w-q55" secondAttribute="trailing" constant="10" id="vpb-0R-uaB"/>
+                            <constraint firstItem="syB-Xd-NV7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wuz-DM-rfX"/>
+                            <constraint firstItem="I3Q-7D-apM" firstAttribute="top" secondItem="ODq-7w-q55" secondAttribute="bottom" constant="40" id="xYo-a8-BWh"/>
+                            <constraint firstItem="syB-Xd-NV7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xcU-ov-Zlc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buscarTextField" destination="tHu-dv-glg" id="ibb-J1-nMC"/>
+                        <outlet property="ciudadLAbel" destination="S5r-j8-i5x" id="VHJ-8L-0RR"/>
+                        <outlet property="climaImageView" destination="KH0-g8-4uf" id="BtO-l9-dVb"/>
+                        <outlet property="temperaturaLabel" destination="fSm-FM-X58" id="p6G-h1-xmw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="buscar" width="32" height="32"/>
+        <image name="kisspng-new-york-city-building-clip-art-stylish-city-building-vector-clip-art-5a9a93065784a8.8226723015200796223585" width="1705" height="776"/>
+        <image name="lugar" width="32" height="32"/>
+        <image name="soleado" width="64" height="64"/>
+    </resources>
+</document>
