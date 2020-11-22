@@ -25,7 +25,20 @@ struct ClimaManager {
             let session = URLSession(configuration: .default)
             
             //3.- Asignar una tarea a la session
-            let tarea = session.dataTask(with: url, completionHandler: handle(data:respuesta:error:))
+            //let tarea = session.dataTask(with: url, completionHandler: handle(data:respuesta:error:))
+            let tarea = session.dataTask(with: url) { (data, respuesta, error) in
+                if error != nil{
+                    print(error)
+                    return
+                }
+                
+                if let datosSeguros = data {
+                    //let dataString = String(data: datosSeguros, encoding: .utf8)
+                    //print(dataString)
+                    //Decodoficar el OBJ JSON de la API
+                    
+                }
+            }
             
             //4.- Empezar tarea
             tarea.resume()
@@ -34,15 +47,4 @@ struct ClimaManager {
         
     }
     
-    func handle (data: Data?, respuesta: URLResponse?, error: Error?){
-        if error != nil{
-            print(error)
-            return
-        }
-        
-        if let datosSeguros = data {
-            let dataString = String(data: datosSeguros, encoding: .utf8)
-            print(dataString)
-        }
-    }
 }
