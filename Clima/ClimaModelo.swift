@@ -19,13 +19,17 @@ struct ClimaModelo{
     var conicionClima: String {
         switch condicionID {
         case 200...232:
-            return "tormenta"
-        case 701...781:
-            return "lluvioso"
+            return "tormenta-1.jpg"
+        case 300...321:
+            return "lluvia.jpg"
+        case 600...622:
+            return "nevado.jpg"
         case 800:
-            return "soleado"
+            return "despejado.jpg"
+        case 801...804:
+            return "nubes.jpeg"
         default:
-            return "mapa"
+            return "despejado.jpg"
         }
     }
     

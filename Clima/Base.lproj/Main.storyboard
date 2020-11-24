@@ -118,6 +118,7 @@
                         <outlet property="buscarTextField" destination="tHu-dv-glg" id="ibb-J1-nMC"/>
                         <outlet property="ciudadLAbel" destination="S5r-j8-i5x" id="VHJ-8L-0RR"/>
                         <outlet property="climaImageView" destination="KH0-g8-4uf" id="BtO-l9-dVb"/>
+                        <outlet property="imagenFondoClima" destination="syB-Xd-NV7" id="wNB-rD-6ty"/>
                         <outlet property="temperaturaLabel" destination="fSm-FM-X58" id="p6G-h1-xmw"/>
                     </connections>
                 </viewController>
