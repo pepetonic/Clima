@@ -27,6 +27,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4NL-6Q-TrJ">
                                         <rect key="frame" x="0.0" y="0.0" width="69.5" height="32"/>
                                         <state key="normal" image="lugar"/>
+                                        <connections>
+                                            <action selector="obtenerUbicacion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0mE-sA-tmv"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tHu-dv-glg">
                                         <rect key="frame" x="79.5" y="0.0" width="235.5" height="32"/>
@@ -57,30 +60,24 @@
                                     <constraint firstItem="tHu-dv-glg" firstAttribute="top" secondItem="ODq-7w-q55" secondAttribute="top" id="ti3-bg-4Qr"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morelia Michoacán" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-j8-i5x">
-                                <rect key="frame" x="90" y="202" width="195" height="25"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="I3Q-7D-apM" userLabel="Stack View Temp">
-                                <rect key="frame" x="10" y="112" width="190" height="40"/>
+                                <rect key="frame" x="10" y="112" width="190" height="44.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="soleado" translatesAutoresizingMaskIntoConstraints="NO" id="KH0-g8-4uf">
-                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="0.0" y="4.5" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="CeX-zh-ciQ"/>
                                             <constraint firstAttribute="height" constant="40" id="OGy-Ws-ea7"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fSm-FM-X58">
-                                        <rect key="frame" x="50" y="0.0" width="53" height="40"/>
+                                        <rect key="frame" x="50" y="0.0" width="53" height="44.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="37"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="°C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X5f-zp-h14">
-                                        <rect key="frame" x="113" y="0.0" width="77" height="40"/>
+                                        <rect key="frame" x="113" y="0.0" width="77" height="44.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -94,18 +91,26 @@
                                     <constraint firstAttribute="trailing" secondItem="X5f-zp-h14" secondAttribute="trailing" id="ws2-Vv-oNY"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morelia Michoacán" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5r-j8-i5x">
+                                <rect key="frame" x="90" y="209" width="191" height="168"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="wxq-ql-9TN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="S5r-j8-i5x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="1ex-rl-5GB"/>
                             <constraint firstItem="ODq-7w-q55" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3pb-Oh-rwp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I3Q-7D-apM" secondAttribute="trailing" constant="175" id="CDx-Q9-3Er"/>
                             <constraint firstItem="ODq-7w-q55" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="FOK-z9-VAJ"/>
                             <constraint firstItem="syB-Xd-NV7" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="FqK-6g-Wq6"/>
-                            <constraint firstItem="S5r-j8-i5x" firstAttribute="top" secondItem="I3Q-7D-apM" secondAttribute="bottom" constant="50" id="HDs-NB-n3V"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S5r-j8-i5x" secondAttribute="trailing" constant="94" id="H11-BB-THT"/>
+                            <constraint firstItem="S5r-j8-i5x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="QMa-5W-l9V"/>
                             <constraint firstItem="I3Q-7D-apM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="T9K-sJ-ahy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S5r-j8-i5x" secondAttribute="bottom" constant="440" id="hmQ-rX-Aph"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S5r-j8-i5x" secondAttribute="trailing" constant="90" id="oBZ-Ww-69I"/>
+                            <constraint firstItem="S5r-j8-i5x" firstAttribute="top" secondItem="I3Q-7D-apM" secondAttribute="bottom" constant="52" id="fjx-44-yyN"/>
                             <constraint firstItem="syB-Xd-NV7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pWX-wZ-scS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ODq-7w-q55" secondAttribute="trailing" constant="10" id="vpb-0R-uaB"/>
                             <constraint firstItem="syB-Xd-NV7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wuz-DM-rfX"/>
@@ -124,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-183" y="115"/>
         </scene>
     </scenes>
     <resources>
