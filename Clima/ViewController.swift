@@ -20,6 +20,11 @@ class ViewController: UIViewController   {
     @IBOutlet weak var ciudadLAbel: UILabel!
     @IBOutlet weak var climaImageView: UIImageView!
     @IBOutlet weak var imagenFondoClima: UIImageView!
+    @IBOutlet weak var tempMaxLabel: UILabel!
+    @IBOutlet weak var tempMinLabel: UILabel!
+    @IBOutlet weak var estadoClimaLabel: UILabel!
+    @IBOutlet weak var humedadLabel: UILabel!
+    @IBOutlet weak var velocidadVientoLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         locationManager.delegate = self
@@ -73,7 +78,8 @@ extension ViewController: ClimaManagerDelegate {
         
         DispatchQueue.main.async {
             self.temperaturaLabel.text = clima.temperaturaDecimal
-            self.ciudadLAbel.text = "En \(clima.nombreCiudad) esta \(clima.descripcionClinma)"
+            self.ciudadLAbel.text = "\(clima.nombreCiudad)"
+            self.estadoClimaLabel.text = "\(clima.descripcionClinma)"
             self.imagenFondoClima.image = UIImage(named: clima.conicionClima)
         }
     }
