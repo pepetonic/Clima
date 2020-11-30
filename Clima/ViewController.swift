@@ -68,7 +68,19 @@ extension ViewController: ClimaManagerDelegate {
     func huboError (cualError: Error){
         print(cualError.localizedDescription)
         DispatchQueue.main.async {
-            self.ciudadLAbel.text = cualError.localizedDescription
+            if cualError.localizedDescription == "The data couldn’t be read because it is missing."{
+                self.ciudadLAbel.text = "Error, escribe una ciudad real"
+            }
+            if cualError.localizedDescription == "Nothing to geocode" {
+                self.ciudadLAbel.text = "Error del servidor"
+            }
+            self.temperaturaLabel.text = ""
+            self.tempMaxLabel.text = ""
+            self.tempMinLabel.text = ""
+            self.estadoClimaLabel.text = ""
+            self.humedadLabel.text = ""
+            self.velocidadVientoLabel.text = ""
+            
         }
     }
     
@@ -78,8 +90,12 @@ extension ViewController: ClimaManagerDelegate {
         
         DispatchQueue.main.async {
             self.temperaturaLabel.text = clima.temperaturaDecimal
+            self.tempMaxLabel.text = "Temp Máx:\(clima.tempMaxDecimal) °C"
+            self.tempMinLabel.text = "Temp Min:\(clima.tempMinDecimal) °C"
             self.ciudadLAbel.text = "\(clima.nombreCiudad)"
             self.estadoClimaLabel.text = "\(clima.descripcionClinma)"
+            self.humedadLabel.text = "Humedad: \(clima.humedad)"
+            self.velocidadVientoLabel.text = "Vel. viento: \(clima.velocidad) m/s"
             self.imagenFondoClima.image = UIImage(named: clima.conicionClima)
         }
     }

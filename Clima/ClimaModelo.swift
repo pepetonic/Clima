@@ -13,6 +13,10 @@ struct ClimaModelo{
     let nombreCiudad: String
     let descripcionClinma: String
     let temperaturaCelcius: Double
+    let temperaturaMaxima: Double
+    let temperaturaMinima: Double
+    let humedad: Int
+    let velocidad: Double
 
     //Crear propiedad computada
     
@@ -21,6 +25,8 @@ struct ClimaModelo{
         case 200...232:
             return "tormenta-1.jpg"
         case 300...321:
+            return "lluvia.jpg"
+        case 500...531:
             return "lluvia.jpg"
         case 600...622:
             return "nevado.jpg"
@@ -35,5 +41,11 @@ struct ClimaModelo{
     
     var temperaturaDecimal: String {
         return String(format: "%.1f", temperaturaCelcius)
+    }
+    var tempMinDecimal: String{
+        return String(format: "%.1f", temperaturaMinima)
+    }
+    var tempMaxDecimal: String{
+        return String(format: "%.1f", temperaturaMaxima)
     }
 }

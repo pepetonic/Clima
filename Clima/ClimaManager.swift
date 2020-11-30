@@ -70,8 +70,12 @@ struct ClimaManager {
             let nombre = dataDecodificada.name
             let descripcion = dataDecodificada.weather[0].description
             let tempeatura = dataDecodificada.main.temp
+            let temperaturaMax = dataDecodificada.main.temp_max
+            let temperaturaMin = dataDecodificada.main.temp_min
+            let humedad = dataDecodificada.main.humidity
+            let velocidad = dataDecodificada.wind.speed
             
-            let ObjClima = ClimaModelo(condicionID: id, nombreCiudad: nombre, descripcionClinma: descripcion, temperaturaCelcius: tempeatura)
+            let ObjClima = ClimaModelo(condicionID: id, nombreCiudad: nombre, descripcionClinma: descripcion, temperaturaCelcius: tempeatura, temperaturaMaxima: temperaturaMax, temperaturaMinima: temperaturaMin, humedad: humedad, velocidad: velocidad)
             
             return ObjClima
         } catch {
